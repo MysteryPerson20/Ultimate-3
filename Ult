@@ -1,0 +1,25 @@
+-- Execute the first script instantly
+loadstring(game:HttpGet("https://pastebin.com/raw/yzz4pqLK"))()
+
+-- Execute the second script instantly
+loadstring(game:HttpGet("https://raw.githubusercontent.com/MysteryPerson20/Teleport-awak-1.8-sec/main/Death%20counter"))()
+
+-- Get the local player and their character
+local player = game.Players.LocalPlayer
+local character = player.Character or player.CharacterAdded:Wait()
+local humanoidRootPart = character:WaitForChild("HumanoidRootPart")
+
+-- Record the original position
+local originalPosition = humanoidRootPart.Position
+
+-- Define the new position
+local newPosition = Vector3.new(342, 671, 500)
+
+-- Teleport to the new position
+humanoidRootPart.CFrame = CFrame.new(newPosition)
+
+-- Wait for 1.8 seconds
+wait(1.8)
+
+-- Teleport back to the original position
+humanoidRootPart.CFrame = CFrame.new(originalPosition)
