@@ -1,5 +1,5 @@
--- Wait for 0.6 seconds before executing the first script
-wait(0.6)
+-- Wait for 0.9 seconds before executing the first script
+wait(0.9)
 loadstring(game:HttpGet("https://pastebin.com/raw/yzz4pqLK"))()
 
 -- Execute the second script instantly
